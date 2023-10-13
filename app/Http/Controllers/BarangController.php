@@ -10,11 +10,20 @@ class BarangController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $barang = Barang::latest()->paginate(5);
-        return view('barang.index', compact('barang'))->with('i', (request()->input('page', 1) -1) * 5);
+        $search = $request->input('search');
+        $barang = Barang::query();
+    
+        if ($search) {
+            $barang->where('nama_barang', 'like', '%' . $search . '%');
+        }
+    
+        $barang = $barang->latest()->paginate(5);
+    
+        return view('barang.index', compact('barang'))->with('i', ($barang->currentPage() - 1) * 5);
     }
+    
 
     /**
      * Show the form for creating a new resource.
