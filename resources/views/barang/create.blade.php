@@ -42,7 +42,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jumlah Terjual:</strong>
-                <textarea class="form-control" name="jumlah_terjual" placeholder="Jumlah Terjual"></textarea>
+                <input type="number" class="form-control" name="jumlah_terjual" placeholder="Jumlah Terjual"/>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

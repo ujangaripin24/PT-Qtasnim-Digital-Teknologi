@@ -6,7 +6,7 @@
 </head>
 <body>
 @include('layout.navbar')
-<div class="container" style="margin-top: 15px;">
+<div class="container-fluid" style="margin-top: 15px;">
     @yield('content')
 </div>
    
