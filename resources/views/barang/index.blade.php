@@ -4,7 +4,12 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </nav>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('barang.create') }}"> Tambah</a>
@@ -57,6 +62,16 @@ Table Barang
                         </td>
                     </tr>
                     @endforeach
+                    <div class="container">
+                        <nav aria-label="">
+                            <ul class="pagination">
+                                @for ($i = 1; $i <= $barang->lastPage(); $i++)
+                                    <li class="page-item {{ $i == $barang->currentPage() ? 'active' : '' }}">
+                                    </li>
+                                @endfor
+                            </ul>
+                        </nav>
+                    </div>
                 </table>
         </div>
     </div>

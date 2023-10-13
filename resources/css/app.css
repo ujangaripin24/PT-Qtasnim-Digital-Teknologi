@@ -1,1 +1,12 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
+
+/* Sembunyikan teks "« Previous Next »" */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    display: none;
+}
+
+/* Sembunyikan teks "Showing X to Y of Z results" */
+.pagination .page-item:last-child + .page-item {
+    display: none;
+}

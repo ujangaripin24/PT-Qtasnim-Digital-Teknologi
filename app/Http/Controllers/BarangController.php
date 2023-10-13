@@ -27,7 +27,7 @@ class BarangController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Barang $barang)
     {
         $request -> validate([
             'nama_barang' => 'required',
@@ -36,6 +36,8 @@ class BarangController extends Controller
             'tanggal_transaksi' => 'required',
             'jenis_barang' => 'required',
         ]);
+
+        Barang::create($request->all());
 
         return redirect()->route('barang.index')->with('success','Barang created successfully.');
     }
@@ -71,7 +73,7 @@ class BarangController extends Controller
   
         $barang->update($request->all());
   
-        return redirect()->route('products.index')->with('success','Product updated successfully');
+        return redirect()->route('barang.index')->with('success','Barang updated successfully');
     }
 
     /**
@@ -81,6 +83,6 @@ class BarangController extends Controller
     {
         $barang->delete();
   
-        return redirect()->route('products.index')->with('success','Product deleted successfully');
+        return redirect()->route('barang.index')->with('success','Barang deleted successfully');
     }
 }

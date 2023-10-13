@@ -54,7 +54,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jenis Barang:</strong>
-                <textarea class="form-control" style="height:150px" name="jenis_barang" placeholder="Jenis Barang"></textarea>
+                <select name="jenis_barang" class="form-control">
+                    <option value="konsumsi">Konsumsi</option>
+                    <option value="pembersih">Pembersih</option>
+                </select>
+                {{-- <textarea class="form-control" style="height:150px" name="jenis_barang" placeholder="Jenis Barang"></textarea> --}}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
