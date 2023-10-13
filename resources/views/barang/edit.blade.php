@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Edit Barang</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('barang.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('barang.index') }}"> Kembali</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
   
-    <form action="{{ route('barang.update',$product->id) }}" method="POST">
+    <form action="{{ route('barang.update',$barang->id) }}" method="POST">
         @csrf
         @method('PUT')
    
@@ -37,25 +37,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Stok:</strong>
-                    <textarea class="form-control" style="height:150px" name="stok" value="{{ $barang->stok }}" placeholder="Detail"></textarea>
+                    <input type="number" class="form-control" name="stok" value="{{ $barang->stok }}" placeholder="Stok"/>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Jumlah Terjual:</strong>
-                    <textarea class="form-control" style="height:150px" name="jumlah_terjual" value="{{ $barang->jumlah_terjual }}" placeholder="Detail"></textarea>
+                    <input type="number" class="form-control" name="jumlah_terjual" value="{{ $barang->jumlah_terjual }}" placeholder="Jumlah Terjual"/>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>TAnggal Transaksi:</strong>
-                    <textarea class="form-control" style="height:150px" name="tanggal_transaksi" value="{{ $barang->tanggal_transaksi }}" placeholder="Detail"></textarea>
+                    <strong>Tanggal Transaksi:</strong>
+                    <input type="date" class="form-control" name="tanggal_transaksi" value="{{ $barang->tanggal_transaksi }}" placeholder="Tanggal Transaksi" />
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Jenis Barang:</strong>
-                    <textarea class="form-control" style="height:150px" name="jenis_barang" value="{{ $barang->jenis_barang }}" placeholder="Detail"></textarea>
+                    <input  class="form-control" name="jenis_barang" value="{{ $barang->jenis_barang }}" placeholder="Jenis Barang"/>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

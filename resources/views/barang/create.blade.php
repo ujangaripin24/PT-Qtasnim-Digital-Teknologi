@@ -4,10 +4,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New Product</h2>
+            <h2>Tambah Data Barang</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('barang.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('barang.index') }}"> Kembali</a>
         </div>
     </div>
 </div>
@@ -36,25 +36,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Stok:</strong>
-                <textarea class="form-control" style="height:150px" name="stok" placeholder="Detail"></textarea>
+                <input type="number" class="form-control" name="stok" placeholder="Stok" />
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jumlah Terjual:</strong>
-                <textarea class="form-control" style="height:150px" name="jumlah_terjual" placeholder="Detail"></textarea>
+                <textarea class="form-control" name="jumlah_terjual" placeholder="Jumlah Terjual"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>TAnggal Transaksi:</strong>
-                <textarea class="form-control" style="height:150px" name="tanggal_transaksi" placeholder="Detail"></textarea>
+                <strong>Tanggal Transaksi:</strong>
+                <input type="date" class="form-control" name="tanggal_transaksi" placeholder="Detail" />
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jenis Barang:</strong>
-                <textarea class="form-control" style="height:150px" name="jenis_barang" placeholder="Detail"></textarea>
+                <textarea class="form-control" style="height:150px" name="jenis_barang" placeholder="Jenis Barang"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>PT. Qtasnim Digital Teknologi</h2>
+
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('barang.create') }}"> Tambah</a>
@@ -45,14 +45,14 @@ Table Barang
                         <td>
                             <form action="{{ route('barang.destroy',$item->id) }}" method="POST">
                
-                                <a class="btn btn-info" href="{{ route('barang.show',$item->id) }}">Show</a>
+                                <a class="btn btn-info" href="{{ route('barang.show',$item->id) }}">Detail</a>
                 
-                                <a class="btn btn-primary" href="{{ route('barang.edit',$item->id) }}">Edit</a>
+                                <a class="btn btn-primary" href="{{ route('barang.edit',$item->id) }}">Ubah</a>
                
                                 @csrf
                                 @method('DELETE')
                   
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">Hapus</button>
                             </form>
                         </td>
                     </tr>
