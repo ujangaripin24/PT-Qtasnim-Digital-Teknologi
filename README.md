@@ -1,3 +1,10 @@
+## API Documentation
+- GET http://localhost:8000/api/barang/ (Menampilkan semua data)
+- GET http://localhost:8000/api/barang/${id} (Menampilkan data berdasarkan id yang dipanggil)
+- POST http://localhost:8000/api/barang/ (Menyimpan data)
+- PUT http://localhost:8000/api/barang/{$id} (Mengubah data berdasarkan id yang dipanggil)
+- DELETE http://localhost:8000/api/barang/${id} (Menghapus data berdasarkan id yang dipanggil)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
